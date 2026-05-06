@@ -3,150 +3,114 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Keco Robotics — autonomous systems for extended underwater operations." />
-    <meta name="theme-color" content="#05080c" />
+    <meta
+      name="description"
+      content="Keco Robotics — The Kelp & Coral Robot Company. Long-range friendly underwater robots."
+    />
+    <meta name="theme-color" content="#b8e8f0" />
     <title>Keco Robotics</title>
+    <link rel="icon" href="icon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Orbitron:wght@500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="noise" aria-hidden="true"></div>
-    <div class="scanlines" aria-hidden="true"></div>
+    <div class="bubbles" aria-hidden="true"></div>
+
+    <!-- Logo swims freely; decorative only -->
+    <div class="swim-logo" id="swimLogo" aria-hidden="true">
+      <img class="swim-logo__img" src="logo.png" alt="" width="140" height="140" decoding="async" />
+    </div>
 
     <header class="top-bar">
-      <div class="brand">
-        <span class="brand-mark" aria-hidden="true"></span>
-        <span class="brand-text">KECO</span>
-        <span class="brand-sub">ROBOTICS</span>
-      </div>
+      <a class="brand" href="#">
+        <span class="brand__emoji" aria-hidden="true">🤿</span>
+        <span class="brand__text">Keco Robotics</span>
+      </a>
       <nav class="nav" aria-label="Primary">
-        <a href="#platform">Platform</a>
-        <a href="#ops">Operations</a>
-        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <a href="#platform">Our robots</a>
+        <a href="#contact">Say hi</a>
       </nav>
-      <div class="status-cluster" role="status">
-        <span class="pill pill--live">SYS · NOM</span>
-        <span class="pill">ENC · AES-256</span>
-      </div>
     </header>
 
     <main>
       <section class="hero">
-        <div class="hero-grid" aria-hidden="true"></div>
-        <div class="hero-content">
-          <p class="eyebrow">
-            <span class="blink" aria-hidden="true">▸</span>
-            CLASSIFIED DISTRIBUTION · L2
-          </p>
-          <h1 class="hero-title">
-            <span class="hero-title-line">Autonomy at</span>
-            <span class="hero-title-line hero-title-line--accent">depth &amp; distance</span>
-          </h1>
+        <div class="hero__blob hero__blob--1" aria-hidden="true"></div>
+        <div class="hero__blob hero__blob--2" aria-hidden="true"></div>
+        <div class="hero__inner">
+          <p class="eyebrow">The Kelp &amp; Coral Robot Company</p>
+          <h1 class="hero__title">Little subs, <span class="hero__wiggle">big adventures</span></h1>
           <p class="lede">
-            We engineer long-range, long-endurance autonomous underwater systems for missions where presence is
-            everything—and signature is nothing.
+            We build long-range, long-endurance autonomous underwater drones. They go very far, stay out a long
+            time, and wave hello to the fish (metaphorically — we are still working on fish handshakes).
           </p>
-          <div class="hero-actions">
-            <a class="btn btn--primary" href="#platform">View platform</a>
-            <a class="btn btn--ghost" href="#contact">Request briefing</a>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#platform">Peek at the platform</a>
+            <a class="btn btn--soft" href="#contact">Send a message in a bottle</a>
           </div>
-        </div>
-        <aside class="hud" aria-hidden="true">
-          <div class="hud-ring">
-            <div class="hud-ring-inner"></div>
-          </div>
-          <dl class="hud-stats">
-            <div>
-              <dt>RNG</dt>
-              <dd>EXT</dd>
-            </div>
-            <div>
-              <dt>DUR</dt>
-              <dd>MAX</dd>
-            </div>
-            <div>
-              <dt>AUT</dt>
-              <dd>FULL</dd>
-            </div>
-          </dl>
-        </aside>
-      </section>
-
-      <section id="platform" class="section section--panels">
-        <div class="section-head">
-          <h2>Platform architecture</h2>
-          <p class="section-kicker">Modular autonomy stack · low observability hull · hardened comms</p>
-        </div>
-        <div class="panels">
-          <article class="panel">
-            <h3><span class="panel-id">01</span> Range</h3>
-            <p>Transoceanic-class transit envelopes with mission-tuned power budgets and thermal discipline.</p>
-          </article>
-          <article class="panel">
-            <h3><span class="panel-id">02</span> Endurance</h3>
-            <p>Weeks-to-months persistence on station. Sleep–wake cycles, drift, and adaptive planning.</p>
-          </article>
-          <article class="panel">
-            <h3><span class="panel-id">03</span> Autonomy</h3>
-            <p>Onboard perception, navigation, and decision engines—degraded GPS and comms‑denied capable.</p>
-          </article>
-          <article class="panel">
-            <h3><span class="panel-id">04</span> Signature</h3>
-            <p>Acoustic, thermal, and EM minimization for missions that cannot afford to be seen or heard.</p>
-          </article>
         </div>
       </section>
 
-      <section id="ops" class="section section--banner">
-        <div class="banner-inner">
-          <div class="banner-copy">
-            <h2>Built for denied environments</h2>
-            <p>
-              From seabed survey to persistent watch, our systems operate where humans cannot—and where satellites
-              rarely look twice.
-            </p>
-          </div>
-          <ul class="tag-list">
-            <li>ASW support</li>
-            <li>Infrastructure assurance</li>
-            <li>Scientific persistence</li>
-            <li>Strategic sensing</li>
-          </ul>
+      <section id="about" class="section section--wave">
+        <div class="section__inner">
+          <h2>Stealth mode: off</h2>
+          <p>
+            We used to pretend we were very serious and tactical. Then we remembered the ocean is full of
+            goofy octopuses and that our logo deserves to swim across your screen like it owns the place. Same
+            engineering chops — fluffier vibe.
+          </p>
         </div>
       </section>
 
-      <section class="section section--stealth">
-        <div class="section-head section-head--split">
-          <div>
-            <h2>Operational security</h2>
-            <p class="section-kicker">We partner under strict NDAs with defense, energy, and research organizations.</p>
-          </div>
-          <blockquote class="pull">
-            “The best drone is the one nobody schedules a press release for.”
-            <cite>— Internal design note · redacted</cite>
-          </blockquote>
+      <section id="platform" class="section">
+        <div class="section__head">
+          <h2>What our robots are good at</h2>
+          <p class="section__kicker">Four cheerful pillars of underwater mischief</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <span class="card__icon" aria-hidden="true">🌊</span>
+            <h3>Going the distance</h3>
+            <p>They can cruise a long, long way — ideal when the interesting bit is not next to the dock.</p>
+          </article>
+          <article class="card">
+            <span class="card__icon" aria-hidden="true">⏳</span>
+            <h3>Patience of a sea cucumber</h3>
+            <p>Long missions, naps between tasks, and power budgets that do not panic at sundown.</p>
+          </article>
+          <article class="card">
+            <span class="card__icon" aria-hidden="true">🧭</span>
+            <h3>Smart enough to get un-lost</h3>
+            <p>Autonomy that keeps its cool when GPS is being weird and the water is being water.</p>
+          </article>
+          <article class="card">
+            <span class="card__icon" aria-hidden="true">🫧</span>
+            <h3>Whisper-quiet energy</h3>
+            <p>We still care about staying sneaky in the water — just less “classified briefing,” more “shhh, nap time.”</p>
+          </article>
         </div>
       </section>
 
       <section id="contact" class="section section--contact">
         <div class="contact-card">
-          <h2>Request a briefing</h2>
-          <p>Share a secure contact path. Our team responds to qualified inquiries only.</p>
-          <a class="mailto" href="mailto:briefings@kecorobotics.com">briefings@kecorobotics.com</a>
-          <p class="fine-print">Replace with your operational alias. GitHub Pages placeholder address shown.</p>
+          <h2>Want to chat?</h2>
+          <p>Drop us a line. We read email almost as well as our robots read sonar.</p>
+          <a class="mailto" href="mailto:hello@kecorobotics.com">hello@kecorobotics.com</a>
+          <p class="fine-print">Swap in your real address when you are ready.</p>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <div class="footer-row">
+      <div class="footer__row">
         <span>© <span id="y"></span> The Kelp &amp; Coral Robot Company</span>
-        <span class="footer-mono">COORD · WGS84 · SEALED</span>
+        <span class="footer__sparkle" aria-hidden="true">✦ ··· ✦</span>
       </div>
     </footer>
 
