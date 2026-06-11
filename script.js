@@ -218,9 +218,9 @@
       tick++;
       var hw = heroEl.offsetWidth, hh = heroEl.offsetHeight;
 
-      /* ── School centre slowly follows mouse, falls back to random roaming ── */
-      var destX = mouseInHero ? lookX : movX;
-      var destY = mouseInHero ? lookY : movY;
+      /* ── School centre roams randomly — mouse only controls look direction ── */
+      var destX = movX;
+      var destY = movY;
       scVX = (scVX + (destX - scX) * SC_K) * SC_D;
       scVY = (scVY + (destY - scY) * SC_K) * SC_D;
       scX += scVX;
