@@ -223,7 +223,7 @@
       if (mouseInHero) {
         var dx = lookX - scX, dy = lookY - scY;
         var dist = Math.sqrt(dx * dx + dy * dy);
-        var SETTLE = 100;
+        var SETTLE = 150;
         destX = dist > 1 ? lookX - (dx / dist) * Math.min(dist, SETTLE) : scX;
         destY = dist > 1 ? lookY - (dy / dist) * Math.min(dist, SETTLE) : scY;
       } else {
