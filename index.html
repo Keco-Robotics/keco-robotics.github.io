@@ -3,114 +3,39 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Keco Robotics — The Kelp & Coral Robot Company. Long-range friendly underwater robots."
-    />
-    <meta name="theme-color" content="#b8e8f0" />
-    <title>Keco Robotics</title>
+    <meta name="description" content="KeCo Robotics — Undersea robotics. Something is coming." />
+    <meta name="theme-color" content="#085041" />
+    <title>KeCo Robotics</title>
     <link rel="icon" href="icon.png" type="image/png" />
     <link rel="apple-touch-icon" href="icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="bubbles" aria-hidden="true"></div>
 
-    <!-- Logo swims freely; decorative only -->
-    <div class="swim-logo" id="swimLogo" aria-hidden="true">
-      <img class="swim-logo__img" src="logo.png" alt="" width="140" height="140" decoding="async" />
-    </div>
-
-    <header class="top-bar">
-      <a class="brand" href="#">
-        <span class="brand__emoji" aria-hidden="true">🤿</span>
-        <span class="brand__text">Keco Robotics</span>
-      </a>
-      <nav class="nav" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#platform">Our robots</a>
-        <a href="#contact">Say hi</a>
-      </nav>
+    <header class="nav-bar">
+      <span class="brand">KeCo Robotics</span>
     </header>
 
     <main>
-      <section class="hero">
-        <div class="hero__blob hero__blob--1" aria-hidden="true"></div>
-        <div class="hero__blob hero__blob--2" aria-hidden="true"></div>
+      <section class="hero" id="hero">
+        <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
         <div class="hero__inner">
-          <p class="eyebrow">The Kelp &amp; Coral Robot Company</p>
-          <h1 class="hero__title">Little subs, <span class="hero__wiggle">big adventures</span></h1>
-          <p class="lede">
-            We build long-range, long-endurance autonomous underwater drones. They go very far, stay out a long
-            time, and wave hello to the fish (metaphorically — we are still working on fish handshakes).
-          </p>
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="#platform">Peek at the platform</a>
-            <a class="btn btn--soft" href="#contact">Send a message in a bottle</a>
-          </div>
-        </div>
-      </section>
-
-      <section id="about" class="section section--wave">
-        <div class="section__inner">
-          <h2>Stealth mode: off</h2>
-          <p>
-            We used to pretend we were very serious and tactical. Then we remembered the ocean is full of
-            goofy octopuses and that our logo deserves to swim across your screen like it owns the place. Same
-            engineering chops — fluffier vibe.
-          </p>
-        </div>
-      </section>
-
-      <section id="platform" class="section">
-        <div class="section__head">
-          <h2>What our robots are good at</h2>
-          <p class="section__kicker">Four cheerful pillars of underwater mischief</p>
-        </div>
-        <div class="cards">
-          <article class="card">
-            <span class="card__icon" aria-hidden="true">🌊</span>
-            <h3>Going the distance</h3>
-            <p>They can cruise a long, long way — ideal when the interesting bit is not next to the dock.</p>
-          </article>
-          <article class="card">
-            <span class="card__icon" aria-hidden="true">⏳</span>
-            <h3>Patience of a sea cucumber</h3>
-            <p>Long missions, naps between tasks, and power budgets that do not panic at sundown.</p>
-          </article>
-          <article class="card">
-            <span class="card__icon" aria-hidden="true">🧭</span>
-            <h3>Smart enough to get un-lost</h3>
-            <p>Autonomy that keeps its cool when GPS is being weird and the water is being water.</p>
-          </article>
-          <article class="card">
-            <span class="card__icon" aria-hidden="true">🫧</span>
-            <h3>Whisper-quiet energy</h3>
-            <p>We still care about staying sneaky in the water — just less “classified briefing,” more “shhh, nap time.”</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="contact" class="section section--contact">
-        <div class="contact-card">
-          <h2>Want to chat?</h2>
-          <p>Drop us a line. We read email almost as well as our robots read sonar.</p>
-          <a class="mailto" href="mailto:hello@kecorobotics.com">hello@kecorobotics.com</a>
-          <p class="fine-print">Swap in your real address when you are ready.</p>
+          <h1 class="hero__title">The Kelp and Coral Robot Company</h1>
+          <form class="hero__form" id="notifyForm" novalidate>
+            <input type="email" name="email" placeholder="your@email.com" autocomplete="email" required />
+            <button type="submit" class="btn btn--coral">Stay informed</button>
+          </form>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <div class="footer__row">
+      <div class="footer__inner">
         <span>© <span id="y"></span> The Kelp &amp; Coral Robot Company</span>
-        <span class="footer__sparkle" aria-hidden="true">✦ ··· ✦</span>
+        <span class="footer__tag">FLOUNDER&#x2011;1  ·  STATUS: running</span>
       </div>
     </footer>
 
