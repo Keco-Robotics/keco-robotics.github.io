@@ -218,9 +218,18 @@
       tick++;
       var hw = heroEl.offsetWidth, hh = heroEl.offsetHeight;
 
-      /* ── School centre roams randomly — mouse only controls look direction ── */
-      var destX = movX;
-      var destY = movY;
+      /* ── School approaches mouse but parks ~100px to the side, not on top ── */
+      var destX, destY;
+      if (mouseInHero) {
+        var dx = lookX - scX, dy = lookY - scY;
+        var dist = Math.sqrt(dx * dx + dy * dy);
+        var SETTLE = 100;
+        destX = dist > 1 ? lookX - (dx / dist) * Math.min(dist, SETTLE) : scX;
+        destY = dist > 1 ? lookY - (dy / dist) * Math.min(dist, SETTLE) : scY;
+      } else {
+        destX = movX;
+        destY = movY;
+      }
       scVX = (scVX + (destX - scX) * SC_K) * SC_D;
       scVY = (scVY + (destY - scY) * SC_K) * SC_D;
       scX += scVX;
